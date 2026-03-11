@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSAUL 점심 룰렛</title>
+    <link rel="stylesheet" href="../css/roulette.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="main-header">
+        <div class="logo">SSAUL</div>
+        <div class="user-info">
+          <span class="user-name">홍길동님</span>
+        </div>
+      </header>
+
+      <main class="roulette-page">
+        <section class="page-title-card card">
+          <div>
+            <h1>점심 룰렛</h1>
+            <p>전체 메뉴로 돌리거나, 원하는 메뉴만 골라서 룰렛을 돌려보세요.</p>
+          </div>
+          <a href="main.html" class="back-btn">메인으로</a>
+        </section>
+
+        <section class="roulette-layout">
+          <!-- 왼쪽: 선택 옵션 -->
+          <article class="card option-card">
+            <div class="card-header">
+              <h2>메뉴 선택</h2>
+            </div>
+
+            <div class="option-actions">
+              <button type="button" class="small-btn" id="selectAllBtn">전체 선택</button>
+              <button type="button" class="small-btn" id="clearAllBtn">전체 해제</button>
+            </div>
+
+            <div class="option-list">
+              <label class="option-item">
+                <input type="checkbox" class="menu-checkbox" value="20F 일반식 (A. 한식)" checked />
+                <span>20F 일반식 (A. 한식)</span>
+              </label>
+
+              <label class="option-item">
+                <input type="checkbox" class="menu-checkbox" value="20F 일반식 (B. 일품)" checked />
+                <span>20F 일반식 (B. 일품)</span>
+              </label>
+
+              <label class="option-item">
+                <input type="checkbox" class="menu-checkbox" value="10F 공존 (도시락)" checked />
+                <span>10F 공존 (도시락)</span>
+              </label>
+
+              <label class="option-item">
+                <input type="checkbox" class="menu-checkbox" value="10F 공존 (브런치)" checked />
+                <span>10F 공존 (브런치)</span>
+              </label>
+
+              <label class="option-item">
+                <input type="checkbox" class="menu-checkbox" value="10F 공존 (샐러드)" checked />
+                <span>10F 공존 (샐러드)</span>
+              </label>
+            </div>
+
+            <div class="guide-box">
+              <p>원하는 선택지만 체크한 뒤 룰렛을 돌릴 수 있어요.</p>
+              <p>체크를 안 건드리면 전체 5개 메뉴로 랜덤 추천됩니다.</p>
+            </div>
+          </article>
+
+          <!-- 오른쪽: 룰렛 -->
+          <article class="card roulette-card">
+            <div class="card-header">
+              <h2>오늘의 점심 추천</h2>
+            </div>
+
+            <div class="roulette-visual-wrap">
+              <div class="roulette-pointer"></div>
+              <div class="roulette-wheel" id="rouletteWheel">
+                <div class="roulette-center">
+                  <span>SSAUL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="roulette-controls">
+              <button type="button" class="spin-btn" id="spinBtn">룰렛 돌리기</button>
+            </div>
+
+            <div class="result-box" id="resultBox">
+              <p class="result-label">결과</p>
+              <h3 id="resultText">아직 결과가 없습니다</h3>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/roulette.js"></script>
+  </body>
+</html>
